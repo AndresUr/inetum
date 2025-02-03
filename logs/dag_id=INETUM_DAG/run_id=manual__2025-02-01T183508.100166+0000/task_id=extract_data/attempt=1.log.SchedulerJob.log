@@ -1,0 +1,1 @@
+[2025-02-01T18:35:14.937+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: INETUM_DAG.extract_data manual__2025-02-01T18:35:08.100166+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

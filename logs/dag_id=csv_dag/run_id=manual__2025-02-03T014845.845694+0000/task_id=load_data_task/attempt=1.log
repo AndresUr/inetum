@@ -1,0 +1,63 @@
+[2025-02-03T01:49:06.863+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-02-03T01:49:06.894+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_dag.load_data_task manual__2025-02-03T01:48:45.845694+00:00 [queued]>
+[2025-02-03T01:49:06.909+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_dag.load_data_task manual__2025-02-03T01:48:45.845694+00:00 [queued]>
+[2025-02-03T01:49:06.910+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-02-03T01:49:06.936+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): load_data_task> on 2025-02-03 01:48:45.845694+00:00
+[2025-02-03T01:49:06.946+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=121) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-03T01:49:06.950+0000] {standard_task_runner.py:63} INFO - Started process 123 to run task
+[2025-02-03T01:49:06.950+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'csv_dag', 'load_data_task', 'manual__2025-02-03T01:48:45.845694+00:00', '--job-id', '243', '--raw', '--subdir', 'DAGS_FOLDER/dagto_csv.py', '--cfg-path', '/tmp/tmp2gr8dgyx']
+[2025-02-03T01:49:06.952+0000] {standard_task_runner.py:91} INFO - Job 243: Subtask load_data_task
+[2025-02-03T01:49:07.041+0000] {task_command.py:426} INFO - Running <TaskInstance: csv_dag.load_data_task manual__2025-02-03T01:48:45.845694+00:00 [running]> on host 2892ee60bb8a
+[2025-02-03T01:49:07.280+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Andres Urrea' AIRFLOW_CTX_DAG_ID='csv_dag' AIRFLOW_CTX_TASK_ID='load_data_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-03T01:48:45.845694+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-03T01:48:45.845694+00:00'
+[2025-02-03T01:49:07.284+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-02-03T01:49:07.303+0000] {logging_mixin.py:188} INFO - DataFrame cargado:
+/tmp/df.csv
+[2025-02-03T01:49:07.304+0000] {logging_mixin.py:188} INFO - <class 'pandas.core.frame.DataFrame'>
+[2025-02-03T01:49:07.354+0000] {logging_mixin.py:188} INFO -    Unnamed: 0     id  ... events     type
+0           0  28940  ...     []  article
+1           1  28939  ...     []  article
+2           2  28938  ...     []  article
+3           3  28937  ...     []  article
+4           4  28936  ...     []  article
+5           5  28935  ...     []  article
+6           6  28934  ...     []  article
+7           7  28933  ...     []  article
+8           8  28932  ...     []  article
+9           9  28930  ...     []  article
+
+[10 rows x 14 columns]
+[2025-02-03T01:49:07.368+0000] {_universal.py:511} INFO - Request URL: 'https://inetumau.blob.core.windows.net/articles/archivo.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '7090'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.19.1 Python/3.12.2 (Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.36)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0e276fc0-e1d1-11ef-922a-0242ac130006'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2025-02-03T01:49:08.387+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 03 Feb 2025 01:49:08 GMT'
+    'ETag': '"0x8DD43F4F3008FA4"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '0cb7a4cb-801e-0091-4add-75c626000000'
+    'x-ms-client-request-id': '0e276fc0-e1d1-11ef-922a-0242ac130006'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 03 Feb 2025 01:49:07 GMT'
+[2025-02-03T01:49:08.390+0000] {logging_mixin.py:188} INFO - El archivo archivo.csv ha sido cargado exitosamente a Azure Blob Storage.
+[2025-02-03T01:49:08.396+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-02-03T01:49:08.398+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-02-03T01:49:08.437+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=csv_dag, task_id=load_data_task, execution_date=20250203T014845, start_date=20250203T014906, end_date=20250203T014908
+[2025-02-03T01:49:08.492+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-02-03T01:49:08.560+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-03T01:49:08.563+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,21 @@
+[2025-02-03T02:02:09.038+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-02-03T02:02:09.078+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_dag.preprocess_data manual__2025-02-03T02:01:52.933118+00:00 [queued]>
+[2025-02-03T02:02:09.104+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_dag.preprocess_data manual__2025-02-03T02:01:52.933118+00:00 [queued]>
+[2025-02-03T02:02:09.106+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-02-03T02:02:09.144+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): preprocess_data> on 2025-02-03 02:01:52.933118+00:00
+[2025-02-03T02:02:09.158+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=297) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-03T02:02:09.162+0000] {standard_task_runner.py:63} INFO - Started process 299 to run task
+[2025-02-03T02:02:09.162+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'csv_dag', 'preprocess_data', 'manual__2025-02-03T02:01:52.933118+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/dagto_csv.py', '--cfg-path', '/tmp/tmpukfoturs']
+[2025-02-03T02:02:09.166+0000] {standard_task_runner.py:91} INFO - Job 250: Subtask preprocess_data
+[2025-02-03T02:02:09.271+0000] {task_command.py:426} INFO - Running <TaskInstance: csv_dag.preprocess_data manual__2025-02-03T02:01:52.933118+00:00 [running]> on host 2892ee60bb8a
+[2025-02-03T02:02:09.480+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Andres Urrea' AIRFLOW_CTX_DAG_ID='csv_dag' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-03T02:01:52.933118+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-03T02:01:52.933118+00:00'
+[2025-02-03T02:02:09.484+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-02-03T02:02:09.597+0000] {logging_mixin.py:188} INFO - DataFrame guardado en /tmp/df.csv
+[2025-02-03T02:02:09.626+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-02-03T02:02:09.627+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-02-03T02:02:09.672+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=csv_dag, task_id=preprocess_data, execution_date=20250203T020152, start_date=20250203T020209, end_date=20250203T020209
+[2025-02-03T02:02:09.742+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-02-03T02:02:09.821+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-03T02:02:09.824+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,28 @@
+[2025-02-02T06:22:19.094+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-02-02T06:22:19.165+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: INETUM_DAG.preprocess_data manual__2025-02-02T06:16:58.827111+00:00 [queued]>
+[2025-02-02T06:22:19.190+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: INETUM_DAG.preprocess_data manual__2025-02-02T06:16:58.827111+00:00 [queued]>
+[2025-02-02T06:22:19.191+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2025-02-02T06:22:19.247+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): preprocess_data> on 2025-02-02 06:16:58.827111+00:00
+[2025-02-02T06:22:19.271+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=138) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-02T06:22:19.280+0000] {standard_task_runner.py:63} INFO - Started process 140 to run task
+[2025-02-02T06:22:19.277+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'INETUM_DAG', 'preprocess_data', 'manual__2025-02-02T06:16:58.827111+00:00', '--job-id', '212', '--raw', '--subdir', 'DAGS_FOLDER/inetum_dag.py', '--cfg-path', '/tmp/tmpg38sb2aa']
+[2025-02-02T06:22:19.285+0000] {standard_task_runner.py:91} INFO - Job 212: Subtask preprocess_data
+[2025-02-02T06:22:19.501+0000] {task_command.py:426} INFO - Running <TaskInstance: INETUM_DAG.preprocess_data manual__2025-02-02T06:16:58.827111+00:00 [running]> on host 2892ee60bb8a
+[2025-02-02T06:22:19.818+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Andres Urrea' AIRFLOW_CTX_DAG_ID='INETUM_DAG' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-02T06:16:58.827111+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-02T06:16:58.827111+00:00'
+[2025-02-02T06:22:19.822+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-02-02T06:22:19.947+0000] {logging_mixin.py:188} INFO -       id                                              title  ... events     type
+0  28937  Live coverage: SpaceX to launch 21 Starlink sa...  ...     []  article
+1  28936  Nayuta Space Secures Major Funding To Develop ...  ...     []  article
+2  28935  Astronomers Call for Global Ban on Space Adver...  ...     []  article
+3  28934      JWST Operational Budget Facing Cuts This Fall  ...     []  article
+4  28933  Boeing and NASA Making “Significant Progress” ...  ...     []  article
+
+[5 rows x 13 columns]
+[2025-02-02T06:22:19.948+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-02-02T06:22:19.949+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-02-02T06:22:19.974+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=INETUM_DAG, task_id=preprocess_data, execution_date=20250202T061658, start_date=20250202T062219, end_date=20250202T062219
+[2025-02-02T06:22:20.063+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-02-02T06:22:20.130+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-02T06:22:20.133+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
