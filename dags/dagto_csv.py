@@ -21,7 +21,7 @@ logging.basicConfig(
                     )
 
 # Definir las variables de conexión a Azure Blob Storage
-connection_string = "DefaultEndpointsProtocol=https;AccountName=inetumau;AccountKey=Z6dW/s0TooktpwgWMrQEzYMkn/IOU+ShjNP7GbXc5yAN7iRC9iIV1KsGwl6GlCL8uuDxyASsEUJ1+ASt10WtZw==;EndpointSuffix=core.windows.net"
+connection_string = "connection_string"
 container_name = "articles" 
 blob_name = "archivo.json"  
 
